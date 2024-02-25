@@ -1,7 +1,7 @@
 import time
 from utility import log_warning, read_bool, read_items_from_file
 from player import Player
-from monster import Monsters
+from monster import Monsters, Monster
 import random
 from random import normalvariate
 
@@ -125,7 +125,7 @@ class Moon:
 
     def get_possible_events(self):
         """returns a list with all possible event numbers and a dificulty for said event"""
-        possible_events = [(0, 1), (1, 2)]
+        possible_events = [(0, 1), (1, 2), (2, 2)]
         # todo add other events
         return possible_events
 
@@ -183,6 +183,7 @@ class Moon:
             else:
                 if monster_kills:
                     print("The present remains sealed. Your crew is very grateful, as the gift looks very ominous.")
+                    return 0, []
                 else:
                     if value > 20 + self.dificulty * 10: 
                         print("The present remains sealed. Your crew thinks the content might have been valueable.")
@@ -190,6 +191,25 @@ class Moon:
                     else: 
                         print("The present remains sealed. Your crew thinks the content would not have been that valueable anyway.")
                         return 0, []
+        if num == 2:
+            try:
+                selected_player = random.choice(self.game.alive_players)
+            except Exception as e:
+                log_warning("player list of game does not work as intended (might be empty)\n")
+                selected_player = Player(name="Steve", weappon_strength=0, clumsiness=10)
+
+            
+            try:
+                selected_monster = random.choice(self.get_Monsters())
+            except Exception as e:
+                log_warning("Monster list of moon does not work as intended (might be empty)\n")
+                selected_monster = Monster("SOS")
+
+            value = round(random.normalvariate(20 + self.dificulty * 10, 5 + self.dificulty))
+            print(f" {selected_player.name}was chased by a {selected_monster.name} and lost items worth {value} credits")
+            return value, []
+
+            
 
 
             
@@ -199,8 +219,8 @@ class Moon:
         extra_loot_today = 0
         events_today = 3
         for i in range(events_today):
+            print()
             selected_event_id =  self.determin_event()
-            print(selected_event_id, " is beeing played")
             try:
                 stuff, players_killed = self.event(selected_event_id)
                 if players_killed is None:
@@ -210,9 +230,7 @@ class Moon:
                 for i, player in enumerate(self.game.alive_players):
                     if player.name in killed_player_names:
                         self.game.alive_players.pop(i)
-                extra_loot_today += stuff   
-                print(f"players: {[p.name for p in self.game.players]}")
-                print(f"alive players: {[p.name for p in self.game.alive_players]}")
+                extra_loot_today += stuff
             except Exception as e:
                 log_warning(f"Well i dont know something fucked something up when doing the event no. {selected_event_id} {e}")
 
