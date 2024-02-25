@@ -1,0 +1,57 @@
+# itemname, value, max_amount & probability
+Key, 3, 2
+Rusty Metal Scraps, 7, 1
+Banana Peel, 10, 1
+Metal Sheet, 16, 3
+Candy, 21, 1
+Hairbrush, 22, 2
+Dust Pan, 22, 2
+Steering Wheel, 24, 1
+Cookie Mold Pan, 26, 2
+Big Bolt, 26, 3
+Ancient Relic, 27, 1
+Yield Sign, 27, 2
+Pill Bottle, 28, 1
+Egg Beater, 28, 2
+Toothpaste, 31, 2
+Toy Cube, 34, 3
+Pixel Sword, 35, 1
+Remote, 34, 1
+Fish Toy, 34, 3
+Coffee Mug, 35, 3
+Stop Sign, 36, 2
+V-Type Engine, 38, 3
+D20 Cube, 43, 1
+Tea Kettle, 44, 2
+Pickle Jar, 46, 2
+Mug, 46, 2
+Large Axle, 48, 3
+Nyan Cat Plush, 50, 1
+Bottles, 50, 3
+Rubber Ducky, 51, 2
+Magnifying Glass, 52, 2
+Magic Ball, 54, 2
+Red Soda, 54, 2
+Old Phone, 56, 2
+Chemical Jug, 58, 1
+Golden Cup, 60, 2
+Clown Horn, 62, 2
+Air horn, 62, 2
+Brass Bell, 64, 2
+Teeth, 65, 2
+Wedding Ring, 66, 2
+Laser Pointer, 45, 1
+Fancy Ring, 66, 2
+Toy Robot, 72, 2
+Dentures, 72, 1
+Portal Gun, 80, 1
+Perfume Bottle, 76, 2
+Hairdryer, 80, 3
+Apparatus, 80, 2
+Painting, 92, 3
+Fancy Lamp, 94, 2
+Bee Hive, 100, 2
+Cash Register, 120, 2
+Golden Snitch, 120, 1
+Gold Bar, 156, 1
+Cosmic Relic from the Future, 10000, 1

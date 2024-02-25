@@ -1,0 +1,7 @@
+# format : name weappon_strength clumsiness 
+Christian 7 4
+Pati 2 8
+Guffenberg 10 2
+Lea 4 8
+Klaus 1 5
+Jason 5 7

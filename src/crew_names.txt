@@ -1,0 +1,6 @@
+# format : name weappon_strength clumsiness 
+Shrek2onDVD 6 4
+NachoMan 10 8
+DontKillMePls 0 10
+Projectiledysfunction 6 3
+CheeksMcClappin 5 5
